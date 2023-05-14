@@ -10,6 +10,8 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 })
 
 
+local set = vim.o
+set.number = true
 
 
 
