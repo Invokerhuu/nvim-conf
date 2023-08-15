@@ -1,3 +1,6 @@
+return {}
+
+--[[
 return {
     "jose-elias-alvarez/null-ls.nvim",
     event = { "BufReadPost", "BufNewFile" },
@@ -19,3 +22,4 @@ return {
         })
     end
 }
+]]--

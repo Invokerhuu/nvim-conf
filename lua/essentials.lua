@@ -45,10 +45,37 @@ global.mapleader = " "
 -- vim.keymap.set({ "n", "i", "v" }, "<Up>", "<Nop>")
 -- vim.keymap.set({ "n", "i", "v" }, "<Down>", "<Nop>")
 
-vim.keymap.set("n", "<A-Tab>", "<cmd>bNext<CR>") 
+vim.keymap.set("n", "<A-q>", "<cmd>bNext<CR>") 
 vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set({ "v", "n" }, "<leader>y", "\"+y")
+
+-- dianostic do not show in-text
+-- vim.diagnostic.config({
+--    virtual_text = false,
+-- })
+
+local diagnostics_active = true
+vim.keymap.set('n', '<leader>tt', function()
+  diagnostics_active = not diagnostics_active
+  if diagnostics_active then
+    vim.diagnostic.show()
+  else
+    vim.diagnostic.hide()
+  end
+end)
+
+-- neovide change scale at runtimepath
+vim.g.neovide_scale_factor = 1.0
+local change_scale_factor = function(delta)
+  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
+end
+vim.keymap.set("n", "<C-+>", function()
+    change_scale_factor(1.25)
+end)
+vim.keymap.set("n", "<C-->", function()
+    change_scale_factor(1/1.25)
+end)
