@@ -82,3 +82,9 @@ end)
 
 -- toggleterm.lua open terminal
 vim.keymap.set("n","tt","<Cmd>ToggleTerm<CR>")
+
+-- terminal keys
+local opts = {buffer=0}
+vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
+vim.keymap.set('t', 'jk',  [[<C-\><C-n>]])
+
