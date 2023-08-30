@@ -43,8 +43,9 @@ return {
 
                 vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
             end
-
-            nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+            
+        
+            -- nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
             nmap('gd', require "telescope.builtin".lsp_definitions, '[G]oto [D]efinition')
             nmap('K', "<cmd>Lspsaga hover_doc<CR>", 'Hover Documentation')
             nmap('gi', require "telescope.builtin".lsp_implementations, '[G]oto [I]mplementation')

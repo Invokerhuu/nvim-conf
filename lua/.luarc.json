@@ -5,5 +5,6 @@
         "/home/huyb/.local/share/nvim/lazy/nvim-lspconfig/lua",
         "/home/huyb/.config/nvim/lua",
         "${3rd}/luv/library"
-    ]
+    ],
+    "workspace.checkThirdParty": false
 }
