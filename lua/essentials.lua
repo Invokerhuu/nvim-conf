@@ -45,6 +45,7 @@ global.mapleader = " "
 -- vim.keymap.set({ "n", "i", "v" }, "<Up>", "<Nop>")
 -- vim.keymap.set({ "n", "i", "v" }, "<Down>", "<Nop>")
 
+
 vim.keymap.set("n", "<A-q>", "<cmd>bNext<CR>") 
 vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR>")
 
@@ -95,7 +96,7 @@ vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]])
 -- clipboard
 
 -- glance
-vim.keymap.set('n', 'gD', '<CMD>Glance definitions<CR>')
-vim.keymap.set('n', 'gR', '<CMD>Glance references<CR>')
-vim.keymap.set('n', 'gY', '<CMD>Glance type_definitions<CR>')
-vim.keymap.set('n', 'gM', '<CMD>Glance implementations<CR>')
+vim.keymap.set('n', 'gd', '<CMD>Glance definitions<CR>')
+vim.keymap.set('n', 'gr', '<CMD>Glance references<CR>')
+vim.keymap.set('n', 'gy', '<CMD>Glance type_definitions<CR>')
+vim.keymap.set('n', 'gm', '<CMD>Glance implementations<CR>')
