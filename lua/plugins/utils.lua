@@ -30,7 +30,7 @@ return {
         "folke/flash.nvim",
         keys = {
             {
-                "s",
+                "<leader>s",
                 mode = { "n", "x", "o" },
                 function()
                     require("flash").jump()
@@ -38,7 +38,7 @@ return {
                 desc = "Flash",
             },
             {
-                "S",
+                "<leader>S",
                 mode = { "n", "o", "x" },
                 function()
                     require("flash").treesitter()

@@ -100,3 +100,6 @@ vim.keymap.set('n', 'gd', '<CMD>Glance definitions<CR>')
 vim.keymap.set('n', 'gr', '<CMD>Glance references<CR>')
 vim.keymap.set('n', 'gy', '<CMD>Glance type_definitions<CR>')
 vim.keymap.set('n', 'gm', '<CMD>Glance implementations<CR>')
+
+-- copy direction info 
+vim.keymap.set('n', '<leader>cc', '<CMD>let @+ = expand("%:p")<CR>')
