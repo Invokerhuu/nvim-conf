@@ -29,7 +29,7 @@ return {
             dockerls = {},
             docker_compose_language_service = {},
             bashls = {},
-            ocamllsp = {},
+            -- ocamllsp = {},
             taplo = {},
             ruff_lsp = {},
             clangd = {},
@@ -45,8 +45,7 @@ return {
             end
             
         
-            -- nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-            nmap('gD', require "telescope.builtin".lsp_definitions, '[G]oto [D]efinition')
+            nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
             nmap('gh', "<cmd>Lspsaga hover_doc<CR>", 'Hover Documentation')
             nmap('gi', require "telescope.builtin".lsp_implementations, '[G]oto [I]mplementation')
             nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
