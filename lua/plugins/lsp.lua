@@ -63,6 +63,8 @@ return {
             nmap("<leader>fm", function()
                 vim.lsp.buf.format { async = true }
             end, "[F]ormat code")
+            nmap('gt', "<cmd>Lspsaga peek_definition<cr>", 'lspsaga [P]eek')
+            nmap('gj', "<cmd>Lspsaga outline<cr>", 'lspsaga [O]utline')
         end
         require("neoconf").setup()
         require("neodev").setup()
