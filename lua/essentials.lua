@@ -104,4 +104,4 @@ vim.keymap.set('n', 'gm', '<CMD>Glance implementations<CR>')
 -- copy direction info 
 vim.keymap.set('n', '<leader>cc', '<CMD>let @+ = expand("%:p")<CR>')
 
-vim.keymap.set('n','<leader>fG',"<CMD>exec 'Telescope grep_string default_text=' . escape(@z, ' ')<CR>")
+vim.keymap.set('n','<leader>fc',"<CMD>exec 'Telescope grep_string default_text=' . escape(@z, ' ')<CR>")
